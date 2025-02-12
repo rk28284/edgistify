@@ -18,10 +18,10 @@
 
   <h2>Directory Structure</h2>
   <pre>
-my-app/
-├─ backend/
-├─ frontend/
-│  ├─ ...
+edgistify/
+├─ server/
+├─ client/
+
   </pre>
 
   <h2>Features</h2>
