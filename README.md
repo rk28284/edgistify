@@ -52,7 +52,7 @@
   <h2>Installation</h2>
   <p>Follow the steps below to set up the project:</p>
   <pre><code>git clone https://github.com/rk28284/edgistify.git
-cd cart-management-api
+cd client
 npm install</code></pre>
 
   <h2>Environment Variables</h2>
