@@ -10,6 +10,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderComponent } from './component/order/order.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     PagenotfoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

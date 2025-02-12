@@ -96,7 +96,7 @@ src="https://www.newsvoir.com/images/user/logo/0_edgistfy%20logo.png"
             <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
             <p class="card-text"><strong>Stock:</strong> {{ product.stock }}</p>
             <!-- <a href="#" class="btn btn-primary mt-auto">Add to Cart</a> -->
-        <button (click)="addtocartProduct({ productId: product.id, quantity: 1 })" type="button" class="btn btn-primary mt-auto" >Add to Cart</button>  
+        <button (click)="addtocartProduct({ productId: product?._id, quantity: 1,stock:product.stock })" type="button" class="btn btn-primary mt-auto" >Add to Cart</button>  
         </div>
         </div>
       </div>
