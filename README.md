@@ -51,7 +51,7 @@
 
   <h2>Installation</h2>
   <p>Follow the steps below to set up the project:</p>
-  <pre><code>git clone https://github.com/your-repo/cart-management-api.git
+  <pre><code>git clone https://github.com/rk28284/edgistify.git
 cd cart-management-api
 npm install</code></pre>
 
