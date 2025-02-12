@@ -8,7 +8,7 @@
   <p>This project provides a simple API to manage a user's shopping cart. It allows adding products to the cart, checking stock availability, placing orders, and ensuring proper user authentication with JWT tokens.</p>
 
   <h2>Project Type</h2>
-  <p>Fullstack</p>
+  <p>Fullstack Project</p>
 
   <h2>Deployed App</h2>
   <ul>
