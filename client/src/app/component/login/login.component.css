@@ -1,0 +1,11 @@
+#background_color {
+    font-weight: bold;
+    width: 100vw;
+    height: 100vh;
+    background: url('./login.jpg');
+    background-size: 600px;
+    background-repeat: repeat-x repeat-y;
+  }
+  .required{
+    font-weight: lighter;
+  }

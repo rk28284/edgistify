@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-3">
+    <a title="edgistify" class="navbar-brand p-2" href="/product">
+      <img
+        style="width: 100px;"
+src="https://www.newsvoir.com/images/user/logo/0_edgistfy%20logo.png"
+        alt="Logo"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <!-- Dropdown for Mobile -->
+        <li class="nav-item dropdown" title="Select Your Department">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Mobile
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Samsung</a></li>
+            <li><a class="dropdown-item" href="#">Realme</a></li>
+            <li><a class="dropdown-item" href="#">Apple</a></li>
+          </ul>
+        </li>
+      </ul>
+  
+      <!-- Right Section: Cart, Order, Profile -->
+      <div class="d-flex align-items-center">
+        <!-- Cart Icon -->
+        <a href="#" class="text-white me-3" title="Cart">
+          <i class="bi bi-cart3"></i>
+        </a>
+  
+        <!-- Order Link -->
+        <a href="#" class="text-white me-3" title="Order">Order</a>
+  
+        <!-- Profile Section -->
+        <a href="#" class="me-2" title="Rakesh Kumar">
+          <img
+            src="https://avatars.githubusercontent.com/u/1?v=4"
+            class="rounded-circle"
+            width="30"
+            height="30"
+            alt="Profile"
+          />
+        </a>
+  
+        <!-- Dropdown for User Options -->
+        <button
+          class="btn btn-outline-light dropdown-toggle"
+          data-bs-toggle="dropdown"
+          title="Select Your Option"
+        >
+           userName 
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+          <li><a class="dropdown-item" routerLink="cart">Cart</a></li>
+          <li><a class="dropdown-item" href="#">Order</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Add spacing below fixed-top navbar to avoid overlap -->
+  <div style="margin-top: 80px;"></div>
+
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3 d-flex" *ngFor="let product of products">
+        <div class="card flex-fill">
+          <div class="img-container">
+            <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description | slice:0:100 }}...</p>
+            <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
+            <p class="card-text"><strong>Stock:</strong> {{ product.stock }}</p>
+            <!-- <a href="#" class="btn btn-primary mt-auto">Add to Cart</a> -->
+        <button (click)="addtocartProduct({ productId: product.id, quantity: 1 })" type="button" class="btn btn-primary mt-auto" >Add to Cart</button>  
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+

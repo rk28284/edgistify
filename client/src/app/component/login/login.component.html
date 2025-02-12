@@ -1,0 +1,82 @@
+<div id="background_color" class="py-3">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="col-6">
+            <div class="card border-0 rounded-4">
+              <div class="card-body p-3">
+                <form [formGroup]="loginform" (ngSubmit)="onLogin()">
+                  <h2 class="text-center">Login Users</h2>
+
+               <!-- email start here -->
+               <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  formControlName="email"
+                  [(ngModel)]="email"
+                  [ngClass]="{
+                    'is-invalid': loginform.controls['email'].touched && loginform.controls['email'].invalid
+                  }"
+                  name="email"
+                />
+                <div
+                  *ngIf="
+                    loginform.controls['email'].touched &&
+                    loginform.controls['email'].invalid
+                  "
+                >
+                  <div
+                    class="required"
+                    *ngIf="loginform.controls['email'].invalid"
+                  >
+                    Email is required
+                  </div>
+                </div>
+              </div>
+                <!-- email end here -->
+                 <!-- <password start here -->
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          formControlName="password"
+                          [(ngModel)]="password"
+                          [ngClass]="{
+                            'is-invalid': loginform.controls['password'].touched && loginform.controls['password'].invalid
+                          }"
+                          name="password"
+                        />
+                        <div
+                          *ngIf="loginform.controls['password'].touched && loginform.controls['password'].invalid"
+                        >
+                          <div class="required">Password Required Minlength 8</div>
+                        </div>
+                      </div>
+  <!-- passwordend here -->
+                  <button type="submit" class="btn btn-primary" [disabled]="!loginform.valid">Submit</button>
+                  <button
+            (click)="onReset()"
+            type="button"
+            class="btn btn-primary btn-block m-2"
+          >
+            Reset
+          </button>
+                  <p class="mt-3 text-center">
+                    New user? <a routerLink="register">Register here</a>
+                  </p>
+                
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

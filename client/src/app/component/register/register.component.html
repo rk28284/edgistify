@@ -1,0 +1,113 @@
+<div id="background_color" class="py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="col-6">
+            <div class="card border-0 rounded-4">
+              <div class="card-body p-3">
+                <form
+                  [formGroup]="registerForm"
+                  (ngSubmit)="registerUser()"
+                
+                >
+                <!-- autocomplete="current-password" -->
+                  <h2 class="text-center">Register Users</h2>
+  
+                  <!-- Full Name start here -->
+<div class="mb-3">
+    <label for="exampleInputuser" class="form-label">Full Name of User</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputuser"
+      formControlName="fullName"
+      [(ngModel)]="fullName"
+      [ngClass]="{
+        'is-invalid': registerForm.controls['fullName'].touched && registerForm.controls['fullName'].invalid
+      }"
+      name="fullName"
+    />
+    <div
+      *ngIf="registerForm.controls['fullName'].touched && registerForm.controls['fullName'].invalid"
+    >
+      <div class="required">Full Name of User Required</div>
+    </div>
+  </div>
+  
+  
+     <!-- username end here -->
+  
+        <!-- email start here -->
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="email"
+      [(ngModel)]="email"
+      [ngClass]="{
+        'is-invalid': registerForm.controls['email'].touched && registerForm.controls['email'].invalid
+      }"
+      name="email"
+    />
+    <div
+      *ngIf="
+        registerForm.controls['email'].touched &&
+        registerForm.controls['email'].invalid
+      "
+    >
+      <div
+        class="required"
+        *ngIf="registerForm.controls['email'].invalid"
+      >
+        Email is required
+      </div>
+    </div>
+  </div>
+  
+              
+              
+                  <!-- email end here -->
+                 <!-- password start here -->
+                 <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      formControlName="password"
+                      [(ngModel)]="password"
+                      [ngClass]="{
+                        'is-invalid': registerForm.controls['password'].touched && registerForm.controls['password'].invalid
+                      }"
+                      name="password"
+                    />
+                    <div
+                      *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].invalid"
+                    >
+                      <div class="required">Password Required Minlength 8</div>
+                    </div>
+                  </div>
+                     <!-- password end here -->
+                  <button [disabled]="!registerForm.valid" type="submit" class="btn btn-primary">Submit</button>
+                  <button
+                  (click)="onReset()"
+                  type="button"
+                  class="btn btn-primary btn-block m-2"
+                >
+                  Reset
+                </button>
+                  <p class="mt-3 text-center">
+                    Already Register user? <a routerLink="/">Login here</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
