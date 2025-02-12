@@ -1,14 +1,17 @@
-
 <body>
   <h1>Cart Management API</h1>
-  <p>This project provides a simple API to manage a user's shopping cart. It allows adding products to the cart, checking stock availability, and ensuring proper user authentication with JWT tokens.</p>
+  <p>This project provides a simple API to manage a user's shopping cart. It allows adding products to the cart, checking stock availability, placing orders, and ensuring proper user authentication with JWT tokens.</p>
 
   <h2>Features</h2>
   <ul>
+    <li>Frontend built with Angular 15</li>
+    <li>User registration and login</li>
     <li>Add products to the cart</li>
     <li>Check stock availability before adding to the cart</li>
+    <li>Place orders</li>
+    <li>Get all products and fetch individual products by ID</li>
     <li>JWT-based user authentication</li>
-    <li>Frontend built with Angular 15</li>
+  
   </ul>
 
   <h2>Frontend</h2>
@@ -20,6 +23,30 @@
     <li><strong>HTML</strong> - Markup language for web pages</li>
     <li><strong>CSS</strong> - Styling language for web design</li>
     <li><strong>JavaScript</strong> - Programming language for dynamic web content</li>
+  </ul>
+
+  <h2>Backend Routes</h2>
+  <h3>User Routes</h3>
+  <ul>
+    <li><code>POST /register</code> - Register a new user</li>
+    <li><code>POST /login</code> - Login a user</li>
+  </ul>
+
+  <h3>Cart Routes</h3>
+  <ul>
+    <li><code>POST /add-to-cart</code> - Add a product to the user's cart (requires authentication)</li>
+  </ul>
+
+  <h3>Order Routes</h3>
+  <ul>
+    <li><code>POST /place</code> - Place an order (requires authentication)</li>
+  </ul>
+
+  <h3>Product Routes</h3>
+  <ul>
+    <li><code>GET /product</code> - Get all products</li>
+    <li><code>GET /product/:id</code> - Get a single product by its ID</li>
+    <li><code>POST /product/add</code> - Add a new product</li>
   </ul>
 
   <h2>Installation</h2>
@@ -36,16 +63,6 @@ npm install</code></pre>
   <p>Start the server with the following command:</p>
   <pre><code>npm start</code></pre>
 
-  <h3>Adding a Product to the Cart</h3>
-  <p>Send a POST request to <code>/api/cart/add</code> with the following format:</p>
-  <pre><code>{
-  "name": "Product Name",
-  "stock": 1
-}</code></pre>
-
-  <p>Include the <code>Authorization</code> header with a valid JWT token:</p>
-  <pre><code>Authorization: Bearer YOUR_JWT_TOKEN</code></pre>
-
   <h2>Middleware</h2>
   <p>The authentication middleware ensures that only authenticated users can access the API. It extracts the user ID from the JWT token and attaches it to the request object.</p>
 
@@ -56,5 +73,7 @@ npm install</code></pre>
     <li><code>mongoose</code> - MongoDB object modeling for Node.js</li>
     <li><code>dotenv</code> - Loads environment variables from a <code>.env</code> file</li>
   </ul>
+
+ 
 </body>
 
