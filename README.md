@@ -32,6 +32,7 @@ edgistify/
     <li>Place orders</li>
     <li>Get all products and fetch individual products by ID</li>
     <li>JWT-based user authentication</li>
+    <li>Form validation applied for user registration and login</li>
   </ul>
 
   <h2>Design Decisions and Assumptions</h2>
