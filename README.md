@@ -1,31 +1,70 @@
+
+ 
+
 <body>
   <h1>Cart Management API</h1>
+
+  <h2>Introduction</h2>
   <p>This project provides a simple API to manage a user's shopping cart. It allows adding products to the cart, checking stock availability, placing orders, and ensuring proper user authentication with JWT tokens.</p>
+
+  <h2>Project Type</h2>
+  <p>Fullstack</p>
+
+  <h2>Deployed App</h2>
+  <ul>
+    <li>Frontend: <a href="https://famous-truffle-3c86fe.netlify.app/" target="_blank">https://famous-truffle-3c86fe.netlify.app/</a></li>
+    <li>Backend: <a href="https://edgistify-backend-v5ep.onrender.com" target="_blank">https://edgistify-backend-v5ep.onrender.com</a></li>
+  </ul>
+
+  <h2>Directory Structure</h2>
+  <pre>
+my-app/
+├─ backend/
+├─ frontend/
+│  ├─ ...
+  </pre>
 
   <h2>Features</h2>
   <ul>
-    <li>Frontend built with Angular 15</li>
     <li>User registration and login</li>
     <li>Add products to the cart</li>
     <li>Check stock availability before adding to the cart</li>
     <li>Place orders</li>
     <li>Get all products and fetch individual products by ID</li>
     <li>JWT-based user authentication</li>
-  
   </ul>
 
-  <h2>Frontend</h2>
-  <p>The frontend is built using the following technologies:</p>
+  <h2>Design Decisions and Assumptions</h2>
   <ul>
-    <li><strong>Angular 15</strong> - A popular framework for building web applications</li>
-    <li><strong>Bootstrap 5</strong> - A CSS framework for responsive design</li>
-    <li><strong>TypeScript</strong> - Superset of JavaScript for enhanced development</li>
-    <li><strong>HTML</strong> - Markup language for web pages</li>
-    <li><strong>CSS</strong> - Styling language for web design</li>
-    <li><strong>JavaScript</strong> - Programming language for dynamic web content</li>
+    <li>JWT is used for authentication to secure user actions.</li>
+    <li>Stock availability is checked before adding items to the cart.</li>
+    <li>Products are stored in a MongoDB database.</li>
   </ul>
 
-  <h2>Backend Routes</h2>
+  <h2>Installation & Getting Started</h2>
+  <p>Follow these steps to install and get the project running:</p>
+  <pre>
+cd client
+npm install 
+npm start
+  </pre>
+
+  <h2>Usage</h2>
+  <p>Provide instructions and examples on how to use your project:</p>
+  <pre>
+# Example usage
+npm run start
+  </pre>
+
+  <h2>Credentials</h2>
+  <p>Provide user credentials for authenticated pages:</p>
+  <p><strong>Email:</strong> rk28284@gmail.com<br><strong>Password:</strong> 12345678</p>
+
+  <h2>APIs Used</h2>
+  <p>No external APIs were used in this project.</p>
+
+  <h2>API Endpoints</h2>
+  <p>List of API endpoints:</p>
   <h3>User Routes</h3>
   <ul>
     <li><code>POST /register</code> - Register a new user</li>
@@ -49,31 +88,16 @@
     <li><code>POST /product/add</code> - Add a new product</li>
   </ul>
 
-  <h2>Installation</h2>
-  <p>Follow the steps below to set up the project:</p>
-  <pre><code>git clone https://github.com/rk28284/edgistify.git
-cd client
-npm install</code></pre>
-
-  <h2>Environment Variables</h2>
-  <p>Create a <code>.env</code> file in the root directory and set the following variables:</p>
-  <pre><code>key=YOUR_JWT_SECRET_KEY</code></pre>
-
-  <h2>Usage</h2>
-  <p>Start the server with the following command:</p>
-  <pre><code>npm start</code></pre>
-
-  <h2>Middleware</h2>
-  <p>The authentication middleware ensures that only authenticated users can access the API. It extracts the user ID from the JWT token and attaches it to the request object.</p>
-
-  <h2>Dependencies</h2>
+  <h2>Technology Stack</h2>
   <ul>
-    <li><code>express</code> - Web framework for Node.js</li>
-    <li><code>jsonwebtoken</code> - For JWT token generation and verification</li>
-    <li><code>mongoose</code> - MongoDB object modeling for Node.js</li>
-    <li><code>dotenv</code> - Loads environment variables from a <code>.env</code> file</li>
+    <li><strong>Frontend:</strong> Angular 15, Bootstrap 5, TypeScript, HTML, CSS, JavaScript</li>
+    <li><strong>Backend:</strong> Node.js, Express.js</li>
+    <li><strong>Database:</strong> MongoDB</li>
+    <li><strong>Authentication:</strong> JWT</li>
+    <li>Other libraries/modules: dotenv, mongoose, jsonwebtoken</li>
   </ul>
 
- 
+  <h2>License</h2>
+  <p>This project is licensed under the MIT License.</p>
 </body>
 
