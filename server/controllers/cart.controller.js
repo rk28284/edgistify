@@ -1,23 +1,25 @@
-
 const Cart = require("../model/cart.model");
 const Product = require("../model/product.model");
 
 // Add a product to the cart
 const addToCart = async (req, res) => {
   try {
-    console.log(req.body)
-    const { price, stock } = req.body;
-    const userId = req.user.id;
+    console.log(req.body);
+    const { price, stock,productId } = req.body;
+    const userId = req.user.userID;
+    console.log(userId, "Line 11");
 
     // Validate input
-    if (!price || !stock || stock <= 0) {
-      return res.status(400).json({ message: "Invalid product price or stock quantity" });
+    if (!stock || stock <= 0) {
+      return res
+        .status(400)
+        .json({ message: "Invalid product price or stock quantity" });
     }
 
     // Check if the product exists
-    const product = await Product.findOne({ price:price });
+    const product = await Product.findOne({_id: productId});
     console.log("Product found:", product);
-    
+
     if (!product) {
       return res.status(404).json({ message: "Product not found" });
     }

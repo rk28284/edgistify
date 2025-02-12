@@ -4,6 +4,9 @@ require("dotenv").config();
 const authentication = (req, res, next) => {
   const Authorization = req.headers.authorization;
   const token = Authorization?.split(" ")[1];
+ 
+  
+console.log(token,"line 7");
 
   if (!Authorization) {
     return res.status(400).send({ msg: "Something went wrong with Authorization" });
@@ -13,10 +16,11 @@ const authentication = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.key); // Ensure your environment variable `key` is set correctly
-    req.user = decoded; // Attach the decoded token to `req.user`
+    const decoded = jwt.verify(token, process.env.key); 
+    req.user = decoded; 
+
     // console.log(req,"Line 18 middelware")
-    console.log(decoded,"line 19");
+    // console.log(decoded,"line 19");
     
     next();
   } catch (error) {
