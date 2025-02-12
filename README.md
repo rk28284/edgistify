@@ -12,8 +12,8 @@
 
   <h2>Deployed App</h2>
   <ul>
-    <li>client: <a href="https://famous-truffle-3c86fe.netlify.app/" target="_blank">https://famous-truffle-3c86fe.netlify.app/</a></li>
-    <li>server: <a href="https://edgistify-backend-v5ep.onrender.com" target="_blank">https://edgistify-backend-v5ep.onrender.com</a></li>
+    <li>Client: <a href="https://famous-truffle-3c86fe.netlify.app/" target="_blank">https://famous-truffle-3c86fe.netlify.app/</a></li>
+    <li>Server: <a href="https://edgistify-backend-v5ep.onrender.com" target="_blank">https://edgistify-backend-v5ep.onrender.com</a></li>
   </ul>
 
   <h2>Directory Structure</h2>
