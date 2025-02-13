@@ -12,7 +12,7 @@
 
   <h2>Deployed App</h2>
   <ul>
-    <li>Client: <a href="https://famous-truffle-3c86fe.netlify.app/" target="_blank">https://famous-truffle-3c86fe.netlify.app/</a></li>
+    <li>Client: <a href="https://famous-truffle-3c86fe.netlify.app/" target="_blank">https://teal-pika-447d89.netlify.app/</a></li>
     <li>Server: <a href="https://edgistify-backend-v5ep.onrender.com" target="_blank">https://edgistify-backend-v5ep.onrender.com</a></li>
   </ul>
 
