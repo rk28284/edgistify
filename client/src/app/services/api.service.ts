@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  baseurl = 'http://localhost:8080';
+  baseurl = 'https://edgistify-backend-v5ep.onrender.com';
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class ApiService {
 
   postOrderItem(orderObj: any) {
     const headers = this.getAuthHeaders();
-    return this.http.post<any>(`${this.baseurl}/order`, orderObj, { headers });
+    return this.http.post<any>(`${this.baseurl}/place`, orderObj, { headers });
   }
 
   private getAuthHeaders(): HttpHeaders {
