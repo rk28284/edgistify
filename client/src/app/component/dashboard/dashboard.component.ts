@@ -20,7 +20,7 @@ getProduct(){
 Loading.circle('Loading...');
     console.log(res);
     this.products=res
-    Loading.remove(1000);
+    Loading.remove(1500);
   })
 }
 
@@ -30,7 +30,7 @@ Loading.hourglass("Adding to Cart...");
     console.log(res);
     Notify.success('Product Added to Cart Successfully');
   })
-  Loading.remove(1000)
+  Loading.remove(1500)
 }
   logout() {
     // alert("User Logout")

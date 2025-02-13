@@ -43,7 +43,7 @@ console.log(res,`Token:${res.token}`);
   sessionStorage.setItem('token', res.token);
   this.router.navigate(['/product']);
  
-   Loading.remove(1000);
+   Loading.remove(1200);
   Notify.success('Login Successfully')
  })
   

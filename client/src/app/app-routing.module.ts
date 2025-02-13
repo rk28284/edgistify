@@ -6,11 +6,13 @@ import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.com
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { OrderComponent } from './component/order/order.component';
+import { CartComponent } from './component/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'order', component: OrderComponent },
+  {path:'cart',component:CartComponent},
 
   { path: 'product', component: DashboardComponent,canActivate:[AuthGuard]},
   { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
